@@ -6,6 +6,9 @@ services:
     container_name: backend
     env_file:
       - ./backend/.env
+    volumes:
+      - ./images/maps:/app/uploads/maps
+      - ./images/images:/app/uploads/images
     ports:
       - "8000:8000"
     depends_on:
